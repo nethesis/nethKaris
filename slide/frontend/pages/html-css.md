@@ -15,72 +15,57 @@
   - `<body>` contiene il contenuto effettivo che vedrà l'utente
 
 ---
-
-# Esempio di pagina HTML
+layout: two-cols
+---
 
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>La mia prima pagina</title>
+    <title>Titolo della pagina</title>
 </head>
 <body>
-    <h1>Benvenuto! Questo è un titolo</h1>
-    <p>Questo è un paragrafo di testo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h1>Benvenut&#601;! Questo &egrave; un titolo</h1>
+    <p>
+        Questo &egrave; un paragrafo di testo. 
+        Lorem ipsum dolor sit amet...
+    </p>
 
-    <ul>
-        <li>Elemento lista 1</li>
-        <li>Elemento lista 2</li>
-        <li>Elemento lista 3</li>
-    </ul>
+    <div>
+        <button>Pulsante</button>
+    </div>
 
-    <a href="https://www.wikipedia.org/">Questo è un link</a>
+    <a href="https://www.wikipedia.org/">
+        Link a Wikipedia
+    </a>
+
+    <div>
+        <img src="https://media.tenor.com/McPQygGOuXYAAAAi/gladgers-hacker-gers-guardians-of-galaxy.gif" alt="hacker" />
+    </div>
 </body>
 </html>
 ```
 
-//// aprire html_example_1
+::right::
+
+<img src="/html-1.png" />
 
 ---
-layout: image-right
-image: https://cover.sli.dev
+
+# Tag principali
+
+- `<h1>`, `<h2>` ... `<h6>`: Titoli di diverso livello
+- `<p>`: Paragrafo
+- `<div>`: Contenitore generico
+- `<span>`: Testo inline
+- `<a href="">`: Link
+- `<img src="">`: Immagini
+- `<ul>`: Lista non ordinata
+- `<ol>`: Lista ordinata
+- `<li>`: Elemento della lista
+- `<form>`: Modulo per compilare e inviare dati
+- `<input>`: Campo di input
+- `<button>`: Pulsante
+
 ---
 
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover!
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
