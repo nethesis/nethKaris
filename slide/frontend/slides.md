@@ -24,9 +24,7 @@ mdc: true
 overviewSnapshots: true
 ---
 
-Test
-
-asdf
+# HTML, CSS & JavaScript
 
 ---
 src: ./pages/html-css.md
