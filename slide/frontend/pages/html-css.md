@@ -92,6 +92,12 @@ layout: two-cols
 
 # Attributi comuni (1/2)
 
+- `class`: usato per assegnare una classe CSS ad un elemento HTML e applicargli uno stile.
+
+```html
+<p class="important-text">C'era una volta...</p>
+```
+
 - `id`: usato per assegnare un identificativo univoco ad un elemento HTML. Utile per identificare un elemento in JavaScript.
 
 ```html
@@ -148,7 +154,7 @@ layout: cover
 
 ---
 
-# Regole CSS
+# Regole CSS (1/2)
 
 - Una regola CSS è formata da un selettore e da un blocco di dichiarazioni
 - In caso di regole in conflitto, vince la regola più specifica
@@ -172,6 +178,26 @@ p.important-text {   /* applica la regola SOLO ai paragrafi con classe "importan
 
 #myTextInput {
     background-color: yellow;
+}
+```
+
+---
+
+# Regole CSS (2/2)
+
+- Il selettore usato più comunemente è il selettore di classe CSS
+
+```html
+<p class="important-text">C'era una volta...</p>
+```
+
+<div class="mb-4"></div>
+
+```css
+.important-text {
+    text-decoration: underline;
+    font-weight: bold;
+    color: blue;
 }
 ```
 
@@ -215,10 +241,16 @@ Le unità di misura vengono utilizzate per definire dimensioni (come larghezze, 
 
 ---
 
-# Usare le regole CSS in un pagina HTML
+# Usare le regole CSS in un pagina HTML (1/2)
 
 - Definire le regole CSS in un file `.css`
-- Includere il file `.css` dentro il codice HTML
+- Includere il file `.css` all'interno del tag `<head>` del codice HTML
+  - Es. `<link rel="stylesheet" href="style.css" />`
+- Assegnare agli elementi elementi HTML le classi CSS per applicargli stile
+
+---
+
+# Usare le regole CSS in un pagina HTML (2/2)
 
 ```css
 /* style.css */
@@ -241,6 +273,7 @@ Le unità di misura vengono utilizzate per definire dimensioni (come larghezze, 
   </head>
   <body>
     ...
+    <p class="important-text">C'era una volta...</p>
   </body>
 </html>
 ```
@@ -251,7 +284,6 @@ image: /html-css.png
 backgroundSize: contain
 ---
 ---
-
 
 # Approfondimenti su HTML e CSS
 
