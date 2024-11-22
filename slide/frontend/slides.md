@@ -1,16 +1,7 @@
 ---
-# You can also start simply with 'default'
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: /cover.jpg
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+title: HTML, CSS & JavaScript
 # apply unocss classes to the current slide
 class: text-center
 # https://sli.dev/features/drawing
@@ -33,5 +24,15 @@ hide: false
 
 ---
 src: ./pages/javascript.md
+hide: false
+---
+
+---
+src: ./pages/exercices-html-css.md
+hide: false
+---
+
+---
+src: ./pages/exercices-javascript.md
 hide: false
 ---

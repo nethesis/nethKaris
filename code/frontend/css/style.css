@@ -16,9 +16,17 @@ h1 {
   color: red;
 }
 
+.text-input {
+  color: white;
+  background-color: rgb(70, 70, 70);
+  padding: 0.5rem; /* 8px */
+  margin-bottom: 1rem; /* 16px */
+  border-radius: 0.5rem; /* 8px */
+}
+
 .yellow-button {
   cursor: pointer;
-  background-color: #99ff99;
+  background-color: rgb(150, 255, 150);
   padding: 0.5rem; /* 8px */
   margin-bottom: 1rem; /* 16px */
   border-radius: 0.5rem; /* 8px */
