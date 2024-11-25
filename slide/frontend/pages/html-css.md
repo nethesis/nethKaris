@@ -66,12 +66,12 @@ layout: two-cols
 
 # Tag principali
 
-- `<h1>`, `<h2>` ... `<h6>`: Titoli di diverso livello
+- `<h1>`, `<h2>` ... `<h6>`: Titoli di livello
 - `<p>`: Paragrafo
-- `<div>`: Contenitore generico
+- `<div>`: Contenitore generico. Usato anche per layout di stile
 - `<span>`: Testo inline
-- `<a href="">`: Link ad un'altra pagina web
-- `<img src="">`: Immagini
+- `<a href="...">`: Link ad un'altra pagina web
+- `<img src="...">`: Immagine
 - `<ul>`: Lista non ordinata
 - `<ol>`: Lista ordinata
 - `<li>`: Elemento della lista
@@ -87,6 +87,12 @@ layout: two-cols
 - Gli attributi forniscono informazioni aggiuntive agli elementi
 - Vanno specificati nel tag iniziale dell'elemento
 - Solitamente ogni attributo è costituito da una coppia nome/valore, es. `name="value"`
+
+---
+
+# Sintassi di tag HTML e attributi
+
+<img src="/tag-syntax.png" />
 
 ---
 
@@ -112,7 +118,7 @@ layout: two-cols
 
 ---
 
-# Attributi comuni (2/2)
+# Attributi comuni (2)
 
 - `src`: attributo del tag `<img>` per specificare l'indirizzo dell'immagine da visualizzare.
 
@@ -128,12 +134,6 @@ layout: two-cols
 ```html
 <img src="img_student.jpg" alt="Student wearing a jacket">
 ```
-
----
-
-# Sintassi di tag HTML e attributi
-
-<img src="/tag-syntax.png" />
 
 ---
 layout: cover
@@ -176,7 +176,7 @@ p.important-text {   /* applica la regola SOLO ai paragrafi con classe "importan
     color: red;
 }
 
-#myTextInput {
+#myTextInput {  /* applica la regola all'elemento con ID "myTextInput" */
     background-color: yellow;
 }
 ```
@@ -249,8 +249,8 @@ Specifica il modo in cui sarà visualizzato l'elemento. Può assumere svariati v
 - `block`: mostra l'elemento su una nuova linea e di default occupa tutta la larghezza, come `<p>` e `<div>`
 - `inline-block`: mostra l'elemento sulla stessa linea come `inline`, ma è possible impostare `width` e `height`
 - `none`: l'elemento non appare e non sarà presente nell'albero HTML
-- `flex`: mostra l'elemento come un contenitore flex di tipo block
-- `inline-flex`: mostra l'elemento come un contenitore flex di tipo inline
+- `flex`: mostra l'elemento come un contenitore flex di tipo block (ne parleremo nelle prossime lezioni)
+- `inline-flex`: mostra l'elemento come un contenitore flex di tipo inline (ne parleremo nelle prossime lezioni)
 
 ---
 
@@ -304,6 +304,16 @@ backgroundSize: contain
 - Organizzare gerarchicamente i container in un layout di una pagina web è fondamentale per garantire una struttura logica e mantenibile
 - Pensare ad ogni sezione della pagina come un contenitore
 - Iniziare dalla struttura generale della pagina (header, contenuto principale, footer) e suddividere ciascun contenitore in sezioni più piccole
+- Ogni contenitore potrà essere stilizzato con regole CSS
+
+```html
+<div class="container">
+  ...
+  <div class="chat">
+    ...
+  </div>
+</div>
+```
 
 ---
 layout: image
