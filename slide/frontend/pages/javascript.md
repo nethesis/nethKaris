@@ -80,13 +80,62 @@ const scuola = 'Liceo'; // Una variabile che non può essere cambiata
  - Numeri: Ad esempio 42 o 3.14.
  - Booleani (vero/falso): true o false.
  - Array: Una lista ordinata di valori.
+ - Oggetti: Una struttura che memorizza dati e metodi correlati.
 
 ```bash
 let messaggio = 'Buongiorno!'; // Stringa
-let temperatura = 25;         // Numero
-let isStudent = true;         // Booleano
-let numeri = [10, 20, 30]; // Array
+let temperatura = 25;          // Numero
+let isStudent = true;          // Booleano
+let numeri = [ 10, 20, 30 ];   // Array
+let persona = 
+{
+  nome: 'Mario',
+  eta: 30,
+  lavoro: 'Programmatore' 
+};
 ```
+
+---
+
+# Gli oggetti
+
+- Gli oggetti in JavaScript servono per memorizzare dati più complessi.
+- Un oggetto è composto da coppie chiave-valore. Le chiavi sono i nomi delle proprietà, e i valori possono essere stringhe, numeri, funzioni o altri oggetti.
+
+```bash
+let persona = 
+{
+  nome: 'Mario',
+  eta: 30,
+  lavoro: 'Programmatore',
+};
+```
+
+---
+
+# Come accedere alle proprietà di un oggetto?
+
+- Possiamo accedere alle proprietà di un oggetto in due modi:
+  - Con il punto (.): `persona.nome`
+  - Con le parentesi quadre `([]): persona['nome']`
+
+  ```bash
+  console.log(persona.nome); // Mostra: "Mario"
+  console.log(persona['eta']); // Mostra: 30
+  ```
+
+---
+
+# Aggiungere o modificare proprietà
+
+- È possibile aggiungere o aggiornare una proprietà di un oggetto in modo dinamico:
+
+  ```bash
+  persona.indirizzo = 'Via Roma, 10'; // Aggiunge una nuova proprietà
+  persona.eta = 31; // Modifica una proprietà esistente
+
+  console.log(persona);
+  ```
 
 ---
 
@@ -96,8 +145,8 @@ let numeri = [10, 20, 30]; // Array
 - Ogni valore in un array ha un indice che parte da 0 (il primo elemento si trova in posizione 0, il secondo in posizione 1, e così via).
 
 ```bash
-let numeri = [10, 20, 30]; // Un array con 3 numeri
-let colori = ['rosso', 'verde', 'blu']; // Un array con 3 stringhe
+let numeri = [ 10, 20, 30 ]; // Un array con 3 numeri
+let colori = [ 'rosso', 'verde', 'blu' ]; // Un array con 3 stringhe
 ```
 
 ---
