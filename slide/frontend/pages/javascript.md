@@ -21,8 +21,8 @@ layout: cover
 
 - Il browser web (ad esempio Chrome o Firefox) è in grado di leggere ed eseguire JavaScript.
 - Possiamo scrivere il nostro codice JavaScript:
- - Direttamente in una pagina HTML
- - Oppure in un file separato con estensione .js.
+  - Direttamente in una pagina HTML
+  - Oppure in un file separato con estensione .js.
 
 ---
 layout: two-cols
@@ -58,9 +58,7 @@ layout: two-cols
 
 ---
 
-# Concetti fondamentali di JavaScript
-
-# 1.  Variabili
+# Variabili
 
 - Le variabili sono "scatole" in cui possiamo memorizzare informazioni, come numeri o parole.
 - Possiamo crearle con le parole chiave let o const.
@@ -73,7 +71,7 @@ const scuola = 'Liceo'; // Una variabile che non può essere cambiata
 
 ---
 
-# 2. Tipi di dati
+# Tipi di dati
 
 - In JavaScript, le variabili possono contenere diversi tipi di informazioni:
  - Stringhe (testo): Racchiuse tra virgolette, ad esempio "Ciao!".
@@ -124,6 +122,8 @@ let persona =
   console.log(persona['eta']); // Mostra: 30
   ```
 
+- Per vedere il risultato della console.log, apri la console degli sviluppatori *premendo F12*.
+
 ---
 
 # Aggiungere o modificare proprietà
@@ -156,6 +156,7 @@ let colori = [ 'rosso', 'verde', 'blu' ]; // Un array con 3 stringhe
 - Possiamo usare il numero dell'indice tra parentesi quadre per accedere a un valore.
 
 ```bash
+let colori = [ 'rosso', 'verde', 'blu' ];
 console.log(colori[0]); // Mostra: "rosso"
 console.log(numeri[2]); // Mostra: 30
 ```
@@ -167,13 +168,14 @@ console.log(numeri[2]); // Mostra: 30
 - Possiamo aggiungere nuovi elementi a un array con il metodo .push().
 
 ```bash
+let colori = [ 'rosso', 'verde', 'blu' ];
 colori.push('giallo'); // Ora l'array è ['rosso', 'verde', 'blu', 'giallo']
 console.log(colori);
 ```
 
 ---
 
-# 3. Operatori
+# Operatori
 
 Gli operatori ci permettono di fare operazioni con i dati.
 
@@ -188,7 +190,7 @@ Gli operatori ci permettono di fare operazioni con i dati.
 
 --- 
 
-# 4. Condizioni if/else
+# Condizioni if/else
 
 - Le condizioni ci permettono di eseguire del codice solo se una certa regola è vera.
 
@@ -204,7 +206,7 @@ if (ora < 12) {
 
 ---
 
-# 5. Cicli (loops)
+# Cicli (loops)
 
 - I cicli servono per ripetere un'azione più volte.
 - Ad esempio, stampare i numeri da 1 a 5:
@@ -217,7 +219,7 @@ for (let i = 1; i <= 5; i++) {
 
 ---
 
-# 6. Funzioni
+# Funzioni
 
 - Le funzioni sono gruppi di istruzioni che possiamo riutilizzare.
 - Possiamo "chiamare" una funzione per far eseguire il codice al suo interno.
@@ -233,7 +235,7 @@ saluta('Anna');  // Mostra: "Ciao Anna!"
 
 ---
 
-# 7. Eventi
+# Eventi
 
 - JavaScript può "ascoltare" quello che succede sulla pagina web, come cliccare un pulsante o muovere il mouse.
 
