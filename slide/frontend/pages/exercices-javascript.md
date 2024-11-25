@@ -155,3 +155,51 @@ layout: cover
       ```bash
       document.getElementById("nameInput").value = "";
       ```
+
+---
+
+  # Esercizio 6 : Lavoriamo con gli oggetti 🛠️
+
+  2. Modifica il file javascript-6-object/script.js:
+
+     - Dichiara un oggetto persona che contenga nome, eta, citta, e hobby: 
+
+       ```bash
+         let persona = {
+            nome: '',
+            eta: '',
+            citta: '',
+            hobby: [''],
+         };
+       ```
+
+     - Aggiungi almeno un elemento all'array hobby:
+
+         ```bash
+         persona.hobby.push('');
+         ```
+
+     - Stampa in console il nome e la città della persona: 
+
+         ```bash
+         console.log(`Nome: ${''}`);
+         ```
+
+     - Stampa in console l'array hobby ciclando su tutti gli elementi:
+
+         ```bash
+         for (let i = 0; i < persona.hobby.length; i++) {
+         }
+         ```
+
+     - Stampa in console il primo elemento dell'array hobby:
+
+         ```bash
+         console.log(persona.hobby[0]);
+         ```
+
+     - Modifica il valore di "città" dell'oggetto persona
+
+         ```bash
+         persona.citta = '';
+         ```
