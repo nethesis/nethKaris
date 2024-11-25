@@ -2,7 +2,7 @@
 layout: cover
 ---
 
-# Javascript 🧠
+# JavaScript 🧠
 
 ---
 
