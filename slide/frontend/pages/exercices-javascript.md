@@ -138,13 +138,13 @@ layout: cover
      - Associa il nome al valore del text input: 
 
       ```js
-      var nome = document.getElementById("nameInput").value;
+      let nome = document.getElementById("nameInput").value;
       ```
 
      - Recupera la lista già esistente e aggiungi il nome:
 
       ```js
-      var lista = document.getElementById("listaNomi");
+      let lista = document.getElementById("listaNomi");
       lista.innerHTML += "<li>" + nome + "</li>";
       ```
 
