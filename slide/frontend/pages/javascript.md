@@ -63,7 +63,7 @@ layout: two-cols
 - Le variabili sono "scatole" in cui possiamo memorizzare informazioni, come numeri o parole.
 - Possiamo crearle con le parole chiave let o const.
 
-```bash
+```js
 let nome = 'Mario'; // Una variabile che contiene il nome
 let eta = 16;       // Una variabile che contiene un numero
 const scuola = 'Liceo'; // Una variabile che non può essere cambiata
@@ -80,7 +80,7 @@ const scuola = 'Liceo'; // Una variabile che non può essere cambiata
  - Array: Una lista ordinata di valori.
  - Oggetti: Una struttura che memorizza dati e metodi correlati.
 
-```bash
+```js
 let messaggio = 'Buongiorno!'; // Stringa
 let temperatura = 25;          // Numero
 let isStudent = true;          // Booleano
@@ -100,7 +100,7 @@ let persona =
 - Gli oggetti in JavaScript servono per memorizzare dati più complessi.
 - Un oggetto è composto da coppie chiave-valore. Le chiavi sono i nomi delle proprietà, e i valori possono essere stringhe, numeri, funzioni o altri oggetti.
 
-```bash
+```js
 let persona = 
 {
   nome: 'Mario',
@@ -117,7 +117,7 @@ let persona =
   - Con il punto (.): `persona.nome`
   - Con le parentesi quadre `([]): persona['nome']`
 
-  ```bash
+  ```js
   console.log(persona.nome); // Mostra: "Mario"
   console.log(persona['eta']); // Mostra: 30
   ```
@@ -130,7 +130,7 @@ let persona =
 
 - È possibile aggiungere o aggiornare una proprietà di un oggetto in modo dinamico:
 
-  ```bash
+  ```js
   persona.indirizzo = 'Via Roma, 10'; // Aggiunge una nuova proprietà
   persona.eta = 31; // Modifica una proprietà esistente
 
@@ -144,7 +144,7 @@ let persona =
 - Gli array servono per memorizzare più valori in una sola variabile.
 - Ogni valore in un array ha un indice che parte da 0 (il primo elemento si trova in posizione 0, il secondo in posizione 1, e così via).
 
-```bash
+```js
 let numeri = [ 10, 20, 30 ]; // Un array con 3 numeri
 let colori = [ 'rosso', 'verde', 'blu' ]; // Un array con 3 stringhe
 ```
@@ -155,7 +155,7 @@ let colori = [ 'rosso', 'verde', 'blu' ]; // Un array con 3 stringhe
 
 - Possiamo usare il numero dell'indice tra parentesi quadre per accedere a un valore.
 
-```bash
+```js
 let colori = [ 'rosso', 'verde', 'blu' ];
 console.log(colori[0]); // Mostra: "rosso"
 console.log(numeri[2]); // Mostra: 30
@@ -167,7 +167,7 @@ console.log(numeri[2]); // Mostra: 30
 
 - Possiamo aggiungere nuovi elementi a un array con il metodo .push().
 
-```bash
+```js
 let colori = [ 'rosso', 'verde', 'blu' ];
 colori.push('giallo'); // Ora l'array è ['rosso', 'verde', 'blu', 'giallo']
 console.log(colori);
@@ -194,7 +194,7 @@ Gli operatori ci permettono di fare operazioni con i dati.
 
 - Le condizioni ci permettono di eseguire del codice solo se una certa regola è vera.
 
-```bash
+```js
 let ora = 10;
 
 if (ora < 12) {
@@ -211,7 +211,7 @@ if (ora < 12) {
 - I cicli servono per ripetere un'azione più volte.
 - Ad esempio, stampare i numeri da 1 a 5:
 
-```bash
+```js
 for (let i = 1; i <= 5; i++) {
   console.log(i); // Mostra: 1, 2, 3, 4, 5
 }
@@ -224,7 +224,7 @@ for (let i = 1; i <= 5; i++) {
 - Le funzioni sono gruppi di istruzioni che possiamo riutilizzare.
 - Possiamo "chiamare" una funzione per far eseguire il codice al suo interno.
 
-```bash
+```js
 function saluta(nome) {
   console.log('Ciao ' + nome + '!');
 }
@@ -239,7 +239,7 @@ saluta('Anna');  // Mostra: "Ciao Anna!"
 
 - JavaScript può "ascoltare" quello che succede sulla pagina web, come cliccare un pulsante o muovere il mouse.
 
-```bash
+```js
 document.getElementById('mioBottone').addEventListener('click', function() {
   alert('Hai cliccato il bottone!');
 });
