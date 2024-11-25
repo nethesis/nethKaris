@@ -10,7 +10,6 @@ layout: cover
 
 - Scarica [Visual Studio Code](https://code.visualstudio.com/)
 - Installa Visual Studio Code
-- ... ////
 - Scarica il codice che contiene gli esercizi
   - Vai su https://github.com/nethesis/nethKaris
   - Clicca il pulsante verde **Code**
@@ -44,17 +43,16 @@ Modifica lo stile di una pagina web
 - Su Visual Studio Code, esamina la struttura HTML di `change-style.html` e le classi CSS utilizzate dai vari tag
 - Su Visual Studio Code apri anche il file `html-2-change-style/style.css`
 - Cambia lo stile della pagina secondo i tuoi gusti, modificando il file `html-2-change-style/style.css` per cambiare:
-  -  i colori del testo (`color`)
+  - i colori del testo (`color`)
   - i colori di sfondo (`background-color`)
   - l'allineamento del testo (`text-align`)
   - l'arrotondamento del pulsante
   - margini e padding
-  - ...
 - Ricarica la pagina `change-style.html` sul browser per vedere le tue modifiche (F5 sulla tastiera)
 
 ---
 
-# Esercizio 3: I miei preferiti (1) 🏆
+# Esercizio 3: I miei preferiti 🏆
 
 Crea una pagina web in cui mostrare una classifica: ad esempio i tuoi 3 film preferiti, oppure le tue 3 canzoni preferite, oppure i tuoi 3 libri preferiti ecc.
 
@@ -87,9 +85,9 @@ Crea una pagina web in cui mostrare una classifica: ad esempio i tuoi 3 film pre
   - Aggiungi l'attributo `class="nomeClasse"` agli elementi a cui vuoi applicare qualche stile
     - Ad es: `<h1 class="mainTitle">I miei film preferiti</h1>`
   - Crea un file `style.css` nella stessa cartella del file HTML (`html-3-favorites`)
-  - Includere il file `.css` all'interno del tag `<head>` del codice HTML per caricare lo stile nella pagina
+  - Includi il file `.css` all'interno del tag `<head>` del codice HTML per caricare lo stile nella pagina
     - Es: `<link rel="stylesheet" href="style.css" />`
-  - Inserisci nel file `style.css` le regole di stile, ad es:
+  - Scrivi nel file `style.css` le regole di stile, ad es:
 
 ```css
 .mainTitle {
@@ -106,3 +104,52 @@ Crea una pagina web in cui mostrare una classifica: ad esempio i tuoi 3 film pre
 
 # Esercizio 4: Chatbot 🤖
 
+Aggiungi stile ad una conversazione con un chatbot
+
+- Su Visual Studio Code apri il file `html-4-chatbot/chatbot.html`
+- Apri lo stesso file anche sul browser (Chrome, Edge, Firefox...)
+- Crea un file `style.css` nella stessa cartella del file HTML (`html-4-chatbot`)
+- Includi il file `.css` all'interno del tag `<head>` del codice HTML
+  - Es: `<link rel="stylesheet" href="style.css" />`
+- Scrivi nel file `style.css` le regole di stile per ottenere uno stile simile a quello della pagina successiva
+
+---
+layout: image
+image: /chatbot-html.png
+backgroundSize: contain
+---
+
+---
+layout: image
+image: /chatbot-html-frames.png
+backgroundSize: contain
+---
+---
+
+# Esercizio 4: Chatbot 🤖 (4)
+
+Suggerimenti per il file di stile
+
+```css
+body {
+  ...
+}
+
+.container {
+  max-width: 40rem;
+  margin: auto; /* centra orizzontalmente il contenitore */
+}
+
+.user-message {
+  display: inline-block;
+  ...
+}
+
+.message-input {
+  width: 79%;
+  font-size: 1rem;
+  border: none;
+  ...
+}
+...
+```

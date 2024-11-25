@@ -90,7 +90,7 @@ layout: two-cols
 
 ---
 
-# Attributi comuni (1/2)
+# Attributi comuni
 
 - `class`: usato per assegnare una classe CSS ad un elemento HTML e applicargli uno stile.
 
@@ -154,7 +154,7 @@ layout: cover
 
 ---
 
-# Regole CSS (1/2)
+# Regole CSS
 
 - Una regola CSS è formata da un selettore e da un blocco di dichiarazioni
 - In caso di regole in conflitto, vince la regola più specifica
@@ -183,7 +183,7 @@ p.important-text {   /* applica la regola SOLO ai paragrafi con classe "importan
 
 ---
 
-# Regole CSS (2/2)
+# Regole CSS (2)
 
 - Il selettore usato più comunemente è il selettore di classe CSS
 
@@ -241,7 +241,20 @@ Le unità di misura vengono utilizzate per definire dimensioni (come larghezze, 
 
 ---
 
-# Usare le regole CSS in un pagina HTML (1/2)
+# Proprietà `display`
+
+Specifica il modo in cui sarà visualizzato l'elemento. Può assumere svariati valori, i principali sono:
+
+- `inline`: l'elemento è posizionato sulla stessa linea degli altri elementi (come `<span>`), occupando solo lo spazio necessario. Eventuali proprietà `width` o `height` saranno ignorate
+- `block`: mostra l'elemento su una nuova linea e di default occupa tutta la larghezza, come `<p>` e `<div>`
+- `inline-block`: mostra l'elemento sulla stessa linea come `inline`, ma è possible impostare `width` e `height`
+- `none`: l'elemento non appare e non sarà presente nell'albero HTML
+- `flex`: mostra l'elemento come un contenitore flex di tipo block
+- `inline-flex`: mostra l'elemento come un contenitore flex di tipo inline
+
+---
+
+# Usare le regole CSS in un pagina HTML
 
 - Definire le regole CSS in un file `.css`
 - Includere il file `.css` all'interno del tag `<head>` del codice HTML
@@ -250,7 +263,7 @@ Le unità di misura vengono utilizzate per definire dimensioni (come larghezze, 
 
 ---
 
-# Usare le regole CSS in un pagina HTML (2/2)
+# Usare le regole CSS in un pagina HTML (2)
 
 ```css
 /* style.css */
@@ -283,6 +296,21 @@ layout: image
 image: /html-css.png
 backgroundSize: contain
 ---
+
+---
+
+# Layout gerarchico
+
+- Organizzare gerarchicamente i container in un layout di una pagina web è fondamentale per garantire una struttura logica e mantenibile
+- Pensare ad ogni sezione della pagina come un contenitore
+- Iniziare dalla struttura generale della pagina (header, contenuto principale, footer) e suddividere ciascun contenitore in sezioni più piccole
+
+---
+layout: image
+image: /chatbot-html-frames.png
+backgroundSize: contain
+---
+
 ---
 
 # Approfondimenti su HTML e CSS
