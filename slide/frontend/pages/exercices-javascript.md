@@ -2,7 +2,7 @@
 layout: cover
 ---
 
-# Esercizi Javascript 💪
+# Esercizi JavaScript 💪
 
 ---
 
