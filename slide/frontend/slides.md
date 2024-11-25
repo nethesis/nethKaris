@@ -36,3 +36,8 @@ hide: false
 src: ./pages/exercices-javascript.md
 hide: false
 ---
+
+---
+src: ./pages/exercises-final.md
+hide: false
+---

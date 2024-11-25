@@ -2,7 +2,7 @@
 layout: cover
 ---
 
-# Esercizi 💪
+# Esercizi HTML & CSS 💪
 
 ---
 
@@ -39,10 +39,10 @@ Cambia il percorso di un'immagine in una pagina web
 Modifica lo stile di una pagina web
 
 - Su Visual Studio Code apri il file `html-2-change-style/change-style.html`
-- Apri il file `html-2-change-style/change-style.html` sul browser
+- Apri il file `html-2-change-style/change-style.html` sul browser (Chrome, Edge, Firefox...)
 - Su Visual Studio Code, esamina la struttura HTML di `change-style.html` e le classi CSS utilizzate dai vari tag
 - Su Visual Studio Code apri anche il file `html-2-change-style/style.css`
-- Cambia lo stile della pagina secondo i tuoi gusti, modificando il file `html-2-change-style/style.css` per cambiare:
+- Cambia lo stile della pagina secondo i tuoi gusti, modificando il file `style.css` per cambiare:
   - i colori del testo (`color`)
   - i colori di sfondo (`background-color`)
   - l'allineamento del testo (`text-align`)

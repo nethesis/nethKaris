@@ -8,49 +8,53 @@ layout: cover
 
 # Esercizio 1: Variabili e operazioni base 🧮
 
-1. Apri il file javascript-1-variables/index.html sul browser.
-2. Modifica il file javascript-1-variables/script.js e:
+1. Apri il file `javascript-1-variables/index.html` sul browser.
+2. Modifica il file `javascript-1-variables/script.js` e:
    - Crea una variabile per il nome di un animale:
 
-    ```bash
+    ```js
     let animale = "cane";
     ```
 
    - Crea una variabile per il numero di zampe:
 
-    ```bash
-    let zampe = "4";
+    ```js
+    let zampe = 4;
     ```
    
    - Crea una variabile per il numero di animali totali:
      
-     ```bash
-     let numeroAnimali = "2";
+     ```js
+     let numeroAnimali = 2;
      ```
 
-   - Calcola la somma del totale delle zampe di due cani:
+---
 
-    ```bash
+# Esercizio 1: Variabili e operazioni base 🧮 (2)
+
+- Calcola la somma del totale delle zampe di due cani:
+
+    ```js
     let totaleZampe = zampe * numeroAnimali;
     console.log("Totale zampe: " + totaleZampe);
     ```
     
-3. Ricarica la pagina web e verifica il risultato nella Console del browser.
+3. Ricarica la pagina web e verifica il risultato nella console del browser (premi F12 sulla tastiera).
 
 ---
 
 # Esercizio 2: Interazione con l'utente 🎤
 
-1. Apri il file javascript-2-prompt-alert/index.html sul browser.
-2. Modifica il file javascript-2-prompt-alert/script.js:
-   - Chiedi all'utente il suo nome usando prompt:
+1. Apri il file `javascript-2-prompt-alert/index.html` sul browser.
+2. Modifica il file `javascript-2-prompt-alert/script.js`:
+   - Chiedi all'utente il suo nome usando `prompt`:
 
-    ```bash
+    ```js
     let nome = prompt("Come ti chiami?");
     ```
    - Saluta l'utente con un messaggio personalizzato:
 
-    ```bash
+    ```js
     alert("Ciao, " + nome + "!");
     ```
 
@@ -58,16 +62,16 @@ layout: cover
 
 # Esercizio 3: Condizioni (if/else) 🚦
 
-1. Apri il file javascript-3-conditions/index.html sul browser.
-2. Modifica il file javascript-3-conditions/script.js:
+1. Apri il file `javascript-3-conditions/index.html` sul browser.
+2. Modifica il file `javascript-3-conditions/script.js`:
    - Chiedi all'utente la sua età:
 
-    ```bash
+    ```js
     let eta = prompt("Quanti anni hai?");
     ```
    - Usa una condizione per verificare se è maggiorenne:
 
-    ```bash
+    ```js
     if (eta >= 18) {
     alert("Sei maggiorenne!");
     } else {
@@ -79,27 +83,27 @@ layout: cover
 
 # Esercizio 4: Cicli e array 🔁
 
-1. Apri il file javascript-4-loops/index.html sul browser.
-2. Apri il file javascript-4-loops/index.html sul browser.
+1. Apri il file `javascript-4-loops/index.html` sul browser.
+2. Modifica il file `javascript-4-loops/index.html`.
    - Crea un array con i tuoi 3 colori preferiti:
 
-    ```bash
+    ```js
     let colori = ["rosso", "verde", "blu"];
     ```
 
-   - Usa un ciclo for per stampare ogni colore nella Console:
+   - Usa un ciclo for per stampare ogni colore nella console del browser (premi F12 sulla tastiera):
 
-    ```bash
+    ```js
     for (let i = 0; i < colori.length; i++) {
-    console.log(colori[i]);
+      console.log(colori[i]);
     }
     ```
 
 ---
 
-  # Esercizio 5 (1/2): Gestione di una lista di nomi 🧑
+  # Esercizio 5: Gestione di una lista di nomi 🧑
 
-  1. Apri il file javascript-5-user-list/index.html sul browser.
+  1. Apri il file `javascript-5-user-list/index.html` sul browser.
 
      - Aggiungi un text input alla tua pagina:
 
@@ -121,38 +125,32 @@ layout: cover
 
 ---
 
-  # Esercizio 5 (2/2): Gestione di una lista di nomi 🧑
+  # Esercizio 5: Gestione di una lista di nomi 🧑 (2)
 
-  2. Modifica il file javascript-5-user-list/script.js:
+  2. Modifica il file `javascript-5-user-list/script.js`:
 
-     - Crea la funzione aggiungiNome(): 
+     - Crea la funzione `aggiungiNome()`: 
 
-      ```bash
+      ```js
       function aggiungiNome() {}
       ```
 
      - Associa il nome al valore del text input: 
 
-      ```bash
+      ```js
       var nome = document.getElementById("nameInput").value;
-      ```
-
-     - Recupera la lista già esistente:
-
-      ```bash
-      var lista = document.getElementById("listaNomi");
       ```
 
      - Recupera la lista già esistente e aggiungi il nome:
 
-      ```bash
+      ```js
       var lista = document.getElementById("listaNomi");
       lista.innerHTML += "<li>" + nome + "</li>";
       ```
 
      - Svuota il campo di input dopo aver aggiunto il nome:
 
-      ```bash
+      ```js
       document.getElementById("nameInput").value = "";
       ```
 
@@ -160,46 +158,53 @@ layout: cover
 
   # Esercizio 6 : Lavoriamo con gli oggetti 🛠️
 
-  2. Modifica il file javascript-6-object/script.js:
+  1. Apri il file `javascript-6-object/index.html` sul browser.
+  2. Modifica il file `javascript-6-object/script.js`:
 
      - Dichiara un oggetto persona che contenga nome, eta, citta, e hobby: 
 
-       ```bash
+       ```js
          let persona = {
             nome: '',
             eta: '',
             citta: '',
-            hobby: [''],
+            hobby: [],
          };
        ```
 
      - Aggiungi almeno un elemento all'array hobby:
 
-         ```bash
-         persona.hobby.push('');
+         ```js
+         persona.hobby.push(...);
          ```
 
-     - Stampa in console il nome e la città della persona: 
+---
 
-         ```bash
-         console.log(`Nome: ${''}`);
-         ```
+# Esercizio 6 : Lavoriamo con gli oggetti 🛠️ (2)
 
-     - Stampa in console l'array hobby ciclando su tutti gli elementi:
+- Stampa in console il nome e la città della persona: 
 
-         ```bash
-         for (let i = 0; i < persona.hobby.length; i++) {
-         }
-         ```
+    ```js
+    console.log('Nome: ' + ...);
+    ```
 
-     - Stampa in console il primo elemento dell'array hobby:
 
-         ```bash
-         console.log(persona.hobby[0]);
-         ```
+- Stampa in console l'array hobby ciclando su tutti gli elementi:
 
-     - Modifica il valore di "città" dell'oggetto persona
+    ```js
+    for (let i = 0; i < persona.hobby.length; i++) {
+      ...
+    }
+    ```
 
-         ```bash
-         persona.citta = '';
-         ```
+- Stampa in console il primo elemento dell'array hobby:
+
+    ```js
+    console.log(persona.hobby[0]);
+    ```
+
+- Modifica il valore di "città" dell'oggetto persona
+
+    ```js
+    persona.citta = ...;
+    ```
