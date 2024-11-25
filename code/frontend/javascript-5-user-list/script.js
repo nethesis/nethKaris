@@ -11,6 +11,6 @@ function aggiungiNome() {
     lista.innerHTML += "<li>" + nome + "</li>";
   }
 
-  // Dopo aver aggiunto il nome pulisci l'id del campo di input per permettere all'utente di inserire un nuovo nome ( id del tag <input> del file index.html)
+  // Pulisci il campo di input
   document.getElementById("...").value = "";
 }
