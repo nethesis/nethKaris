@@ -1,11 +1,13 @@
-// Crea due variabili che abbiamo dei valori numerici
-let numero1 = "";
-let numero2 = "";
-
-// Associa alla variabile somma la somma dei due numeri ( utilizza l'operatore + )
-let somma = "";
+// Crea una variabile che indichi il tipo di animale
+let animale = "";
+// Crea una variabile che indichi il numero di zampe dell'animale
+let zampe = "";
+// Crea una variabile che indichi il numero di animali
+let numeroAnimali = "";
+// Associa alla variabile totaleZampe il numero totale di zampe tramite la moltiplicazione ( utilizza l'operatore * )
+let totaleZampe = "";
 
 // Stampa dei risultati
-console.log("Il primo numero è:", numero1);
-console.log("Il secondo numero è:", numero2);
-console.log("La somma è:", somma);
+console.log("Il numero di zampe per animale è:", zampe);
+console.log("Il numero di animali è:", numeroAnimali);
+console.log("La somma è:", totaleZampe);
