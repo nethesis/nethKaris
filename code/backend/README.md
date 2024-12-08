@@ -27,35 +27,10 @@ Esportare la variabile d'ambiente con l'API key di OpenAI
 export $(cat api_key.txt)
 ```
 
-(Opzionale) usare python virtualenv
-
-```
-virtualenv workshop
-source workshop/bin/activate
-```
-
 Installare le librerie necessarie
 
 ```
 pip install -r requirements.txt
-```
-
-## Preparare l'ambiente su NethServer 8
-
-```
-dnf install -y python3-pip vim git unzip
-git clone https://github.com/Stell0/NethAIWorkshop2024.git
-cd NethAIWorkshop2024
-pip install virtualenv
-virtualenv workshop
-source workshop/bin/activate
-pip install -r requirements.txt
-```
-
-Estrarre l'archivio con l'api key ed esportarla
-```
-unzip -P PASSWORD api_key.zip
-export $(cat api_key.txt)
 ```
 
 
@@ -108,11 +83,3 @@ Eseguire la parte 3 con tutti i documenti della playlist e un modello migliore
 python parte3playground.py https://www.youtube.com/playlist?list=PLWzKfs3icbT6yhDTpO1GyDlz9AXdWSiGr
 ```
 
-
-## Links
-
-Repository GitHub https://github.com/Stell0/NethAIWorkshop2024
-
-Presentazione https://docs.google.com/presentation/d/1JSOQmHB8shZv2JdfEXTAEwi5X1GUPTVQHcPxqgP4xsw/
-
-LangChain https://www.langchain.com/
