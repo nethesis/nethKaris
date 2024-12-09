@@ -41,3 +41,8 @@ hide: false
 src: ./pages/exercises-final.md
 hide: false
 ---
+
+---
+src: ./pages/pre-holidays.md
+hide: false
+---

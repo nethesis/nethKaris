@@ -1,0 +1,60 @@
+body {
+  background-color: rgb(17, 17, 17);
+  color: rgb(240, 240, 240);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 40rem;
+  margin: auto; /* centra orizzontalmente il contenitore */
+}
+
+.title {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.user-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(0, 64, 160);
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+.bot-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(30, 30, 30);
+  border-radius: 1rem;
+}
+
+.message-bar {
+  margin-top: 1rem;
+}
+
+.message-input {
+  background-color: rgb(8, 8, 8);
+  color: rgb(240, 240, 240);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-right: 0.5rem;
+  width: 79%;
+  font-size: 1rem;
+  border: none;
+}
+
+.send-button {
+  border-radius: 0.5rem;
+  padding: 0.75rem 2rem;
+  background-color: rgb(0, 64, 160);
+  color: rgb(240, 240, 240);
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: rgb(0, 64, 224);
+}
