@@ -28,12 +28,12 @@ hide: false
 ---
 
 ---
-src: ./pages/exercices-html-css.md
+src: ./pages/exercises-html-css.md
 hide: false
 ---
 
 ---
-src: ./pages/exercices-javascript.md
+src: ./pages/exercises-javascript.md
 hide: false
 ---
 
@@ -49,5 +49,20 @@ hide: false
 
 ---
 src: ./pages/flexbox.md
+hide: false
+---
+
+---
+src: ./pages/fetch.md
+hide: false
+---
+
+---
+src: ./pages/exercises-flexbox.md
+hide: false
+---
+
+---
+src: ./pages/exercises-fetch.md
 hide: false
 ---

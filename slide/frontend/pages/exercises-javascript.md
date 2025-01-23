@@ -5,6 +5,11 @@ layout: cover
 # Esercizi JavaScript 💪
 
 ---
+src: ../pages/exercise-0-setup.md
+hide: false
+---
+
+---
 
 # Esercizio 1: Variabili e operazioni base 🧮
 

@@ -19,9 +19,9 @@ layout: cover
 
 ---
 
-# Quali attrezzi ci mancano per la UI finale del chatbot?
+# Quali attrezzi ci mancano per costruire la UI finale del chatbot? 🛠️
 
-- Flexbox: strumento di layout CSS per impaginare facilmente gli elementi nella pagina web, ad es. i riquadri della chat, il messaggio scritto dall'utente ecc.
+- Flexbox: strumento di layout CSS per impaginare facilmente gli elementi nella pagina web del chatbot.
 - `fetch`: istruzione Javascript per eseguire chiamate di rete. Ci servirà per inviare i messaggi dell'utente alla AI e ricevere le sue risposte
 
 ---
@@ -49,10 +49,6 @@ image: /display-property.png
 backgroundSize: contain
 ---
 
-
-
-
-
 ---
 
 # Flexbox
@@ -69,7 +65,7 @@ backgroundSize: contain
 - Immagina di avere una scatola (contenitore) con degli oggetti (elementi) dentro. Come vogliamo disporre questi oggetti all'interno del contenitore?
   - In riga o in colonna: puoi decidere se gli elementi devono essere disposti uno accanto all'altro (orizzontalmente) o uno sopra l'altro (verticalmente) usando `flex-direction`
   - Allineamento: puoi centrare gli elementi, spostarli a destra, a sinistra o distribuire lo spazio tra di loro con proprietà come `justify-content` (per l'allineamento orizzontale) e `align-items` (per l'allineamento verticale)
-  - Distanza: puoi specificare la distanza minima tra gli elementi usango le proprità `gap`, `row-gap` e `column-gap`
+  - Distanza: puoi specificare la distanza minima tra gli elementi usando le proprietà `gap`, `row-gap` e `column-gap`
 
 ---
 layout: two-cols-header
@@ -164,10 +160,6 @@ Oppure, specificando sia il gap tra le righe che quello tra le colonne:
   gap: 1rem 2rem; /* row-gap column gap */
 }
 ```
-
----
-
-https://flexboxfroggy.com/
 
 ---
 

@@ -5,19 +5,9 @@ layout: cover
 # Esercizi HTML & CSS 💪
 
 ---
-
-# Esercizio 0: Prepariamo l'ambiente di lavoro 🛠️
-
-- Scarica [Visual Studio Code](https://code.visualstudio.com/)
-- Installa Visual Studio Code
-- Scarica il codice che contiene gli esercizi
-  - Vai su https://github.com/nethesis/nethKaris
-  - Clicca il pulsante verde **Code**
-  - Clicca **Download ZIP**
-  - Estrai il file .zip dove preferisci, ad esempio sul Desktop
-- Apri Visual Studio Code
-- Clicca su **File > Open Folder...**
-- Entra nella cartella in cui hai estratto il file .zip, seleziona la cartella `code/frontend`, ad es. `Desktop/nethKaris-main/code/frontend` e clicca **OK**
+src: ../pages/exercise-0-setup.md
+hide: false
+---
 
 ---
 
