@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  /* ... */
+  background-color: yellow;
+  height: 20rem;
+}
+
+.brick {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+
+.red {
+  background-color: red;
+}
+
+.cyan {
+  background-color: cyan;
+}
+
+.orange {
+  background-color: orange;
+}
