@@ -34,7 +34,7 @@ Invece di caricare *tutta* la pagina, `fetch` chiede *solo dati*.  È come manda
 # Esempio Pratico ‍✍️
 
 ```javascript
-fetch('[URL non valido rimosso]!')
+fetch('https://example.com/api/')
   .then(response => response.json())
   .then(data => {
     console.log(data.risposta); // "Ciao! Come posso aiutarti?"
