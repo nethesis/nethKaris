@@ -1,0 +1,6 @@
+langchain
+langchain_openai
+langchain_chroma
+langchain_community
+bs4
+nest_asyncio
