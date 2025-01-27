@@ -8,13 +8,11 @@ let randomAnswers = [
 let chatMessages = [];
 
 function addMessage(e) {
-  console.log("È stata chiamata la funzione addMessage");
-
   // non ricaricare la pagina quando viene premuto INVIO nel campo di input
   e.preventDefault();
 
   // recuperiamo il messaggio dell'utente
-  // let userMessage = ...
+  let userMessage = document.getElementById("user-message").value;
 
   // non fare niente se il messaggio dell'utente è vuoto
   if (userMessage.length == 0) {
@@ -29,9 +27,8 @@ function addMessage(e) {
   // scegli una risposta casuale
   let randomIndex = Math.floor(Math.random() * randomAnswers.length);
   let botMessage = { type: "bot-message", message: randomAnswers[randomIndex] };
-
   // aggiungiamo il messaggio del bot all'array dei messaggi
-  // chatMessages.push(...);
+  chatMessages.push(botMessage);
 
   // popoliamo la chat con i messaggi
   let chatElement = document.getElementById("chat-messages");
@@ -44,5 +41,5 @@ function addMessage(e) {
   }
 
   // pulisci il campo di input
-  // ...
+  document.getElementById("user-message").value = "";
 }

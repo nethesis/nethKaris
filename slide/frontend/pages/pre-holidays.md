@@ -38,7 +38,7 @@ Implementa un semplice chatbot che risponde all'utente con una frase casuale
 - Scarica il codice aggiornato e le slide (segnatevi questo link): https://tinyurl.com/karisAI
 - Su Visual Studio Code apri il file `chatbot-random/chatbot-random.html`
 - Apri lo stesso file anche sul browser (Chrome, Edge, Firefox...)
-- Modifica il file `chatbot-random.html` in modo che quando l'utente clicca il pulsante **Invia**, venga eseguita la funzione `addMessage` contenuta dentro a `script.js`
+- Modifica il file `chatbot-random.html` in modo che quando l'utente clicca il pulsante **Invia**, venga eseguita la funzione `addMessage` contenuta dentro a `script.js`. Per farlo, correggi la funzione chiamata alla linea `<form onsubmit="return addMessage(event)" ...`
 - Completa nella funzione `addMessage` le linee di istruzioni che contengono puntini di sospensione (...)
 - Per vedere e risolvere eventuali errori nel codice, tieni aperta la console del browser (premi F12 sulla tastiera).
 - Cerca di capire anche le linee di codice già scritte
