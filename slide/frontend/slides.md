@@ -66,3 +66,8 @@ hide: false
 src: ./pages/exercises-fetch.md
 hide: false
 ---
+
+---
+src: ./pages/exercises-final-chatbot.md
+hide: false
+---

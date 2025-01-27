@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karis Chatbot</title>
+  </head>
+  <body>
+    <div class="wrapper flex flex-col h-screen p-6 max-w-3xl m-auto">
+      <!-- header -->
+      <div>
+        <h1
+          class="header text-3xl font-medium text-primary-700 dark:text-primary-500 mb-8"
+        >
+          Karis Chatbot
+        </h1>
+      </div>
+      <!-- messages -->
+      <div
+        id="chat-messages"
+        class="messages flex flex-col items-start gap-4 overflow-y-auto flex-1"
+      >
+        <!-- <div //// 
+          v-for="(message, index) in chatMessages"
+          :key="index"
+          :class="[
+            'rounded-xl bg-gray-800 p-5 max-w-md',
+            { 'self-end bg-primary-900': message.role == 'user' }
+          ]"
+          v-html="message.content"
+        />
+        <div v-if="isLoading" class="rounded-xl bg-gray-800 p-5 max-w-md">
+          <div v-if="chatOutput.length">{{ chatOutput }}</div>
+          <ColoredSkeleton
+            v-else
+            :lines="2"
+            colorClasses="bg-primary-300 dark:bg-primary-700"
+            size="sm"
+            class="w-80"
+          />
+        </div> -->
+      </div>
+      <!-- user input -->
+      <form onsubmit="return addMessage(event)" class="input-and-button flex gap-4 py-4">
+        <!-- <NeTextInput //// 
+          v-model.trim="chatInput"
+          placeholder="Message"
+          :disabled="isLoading"
+          ref="chatInputRef"
+          class="grow"
+        />
+        <NeButton
+          type="submit"
+          kind="primary"
+          @click="send"
+          :disabled="isLoading"
+          >Send</NeButton
+        > -->
+        <input
+          id="user-message"
+          type="text"
+          placeholder="Scrivi un messaggio..."
+          class="message-input"
+        />
+        <button type="submit" class="send-button">Invia</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
