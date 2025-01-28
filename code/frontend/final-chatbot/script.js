@@ -68,9 +68,23 @@ function addMessage(e) {
       chatMessagesElement.scrollTop = chatMessagesElement.scrollHeight;
     })
     .catch((error) => {
-      console.error("Errore durante la fetch:", error);
+      console.error("Errore:", error);
 
-      //// notifica su UI
+      // crea l'elemento HTML per il messaggio di errore
+      const errorMessageElement = document.createElement("div");
+      const errorMessageClasses = errorMessageElement.classList;
+      errorMessageClasses.add("message-bubble");
+      errorMessageClasses.add("error-message");
+      errorMessageElement.textContent = "Qualcosa è andato storto 😭";
+
+      // rimuovi il messaggio di caricamento
+      loadingMessageElement.remove();
+
+      // aggiungi il messaggio del bot alla chat
+      chatMessagesElement.appendChild(errorMessageElement);
+
+      // scrolla la chat in basso
+      chatMessagesElement.scrollTop = chatMessagesElement.scrollHeight;
     });
 
   // pulisci il campo di input

@@ -35,7 +35,6 @@ body {
   gap: 1rem;
   overflow-y: auto;
   flex: 1 1 0%;
-  padding-left: 1rem;
   padding-right: 1rem;
 }
 
@@ -43,7 +42,6 @@ body {
   border-radius: 0.75rem;
   background-color: #1f2937;
   padding: 1.25rem;
-  /* max-width: 28rem; //// */
 }
 
 .user-message {
@@ -51,13 +49,9 @@ body {
   align-self: flex-end;
 }
 
-/* .skeleton { //// 
-  color: #94a3b8;
-  height: 0.5rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  background-color: rgb(51 65 85);
-} */
+.error-message {
+  background-color: #7f1d1d;
+}
 
 .input-and-button {
   display: flex;

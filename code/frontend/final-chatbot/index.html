@@ -8,23 +8,18 @@
     <title>Karis Chatbot</title>
   </head>
   <body>
-    <div class="wrapper flex flex-col h-screen p-6 max-w-3xl m-auto">
+    <div class="wrapper">
       <!-- header -->
       <div>
-        <h1
-          class="header text-3xl font-medium text-primary-700 dark:text-primary-500 mb-8"
-        >
-          Karis Chatbot
-        </h1>
+        <h1 class="header">Karis Chatbot</h1>
       </div>
       <!-- messages -->
-      <div
-        id="chat-messages"
-        class="messages flex flex-col items-start gap-4 overflow-y-auto flex-1"
-      >
-        <div class="message-bubble" style="list-style-position: inside">
-          <p>Ciao, questo è l'elenco delle gite di cui sono a conoscenza:</p>
-          <ul>
+      <div id="chat-messages" class="messages">
+        <div class="message-bubble">
+          <p style="margin-bottom: 0.5rem">
+            Ciao! Questo è l'elenco delle gite di cui sono a conoscenza:
+          </p>
+          <ul style="list-style-position: inside">
             <li>Firenze 05/2024</li>
             <li>Parma 2023</li>
             <li>Mantova 2024</li>
@@ -38,10 +33,7 @@
         </div>
       </div>
       <!-- user input -->
-      <form
-        onsubmit="return addMessage(event)"
-        class="input-and-button flex gap-4 py-4"
-      >
+      <form onsubmit="return addMessage(event)" class="input-and-button">
         <input
           id="user-message"
           type="text"
