@@ -33,7 +33,7 @@ Apri la console del browser (tasto destro -> "Ispeziona" -> "Console"). Dovresti
 
 Mostriamo un Pokémon casuale!
 
-*   Endpoint per la lista di tutti i Pokémon: `https://pokeapi.co/api/v2/pokemon?limit=10000`.
+*   Endpoint per la lista di tutti i Pokémon: `https://pokeapi.co/api/v2/pokemon?limit=100`.
 
 ---
 
