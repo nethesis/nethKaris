@@ -8,14 +8,15 @@ from langchain_core.prompts import ChatPromptTemplate
 # Usiamo il Document Loader per le gite
 from langchain_community.document_loaders import WebBaseLoader
 wordpress_urls = [
-    "http://karis.cloud.neth.eu/mantova-2024/",
-    "http://karis.cloud.neth.eu/campania-2023/",
+	"http://karis.cloud.neth.eu/mantova-2024/",
+	"http://karis.cloud.neth.eu/campania-2023/",
 	"http://karis.cloud.neth.eu/firenze-05-2024/",
 	"http://karis.cloud.neth.eu/grecia-2022/",
 	"http://karis.cloud.neth.eu/vienna-e-monaco-2023/",
 	"http://karis.cloud.neth.eu/firenze-2024/",
 	"http://karis.cloud.neth.eu/bali-2023/",
 	"http://karis.cloud.neth.eu/antibes-2024/",
+	"http://karis.cloud.neth.eu/parma-2023/",
 ]
 loader = WebBaseLoader(wordpress_urls)
 

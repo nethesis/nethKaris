@@ -81,6 +81,6 @@ def get_generate(query: str):
 	return answer
 
 # Run the FastAPI app
-uvicorn.run(app, host="0.0.0.0", port=8000)
+uvicorn.run(app, host="0.0.0.0", port=8888)
 
 # verifica il funzionamento andando alla pagina http://karis.sf.nethserver.net:8000/documents/testquery
