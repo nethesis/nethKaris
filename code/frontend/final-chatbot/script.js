@@ -1,44 +1,77 @@
-let randomAnswers = [
-  "Uhmm non lo so",
-  "Scusa, non ho capito :(",
-  "Boh! Vuoi sentire una barzelletta?",
-  "Mah! Non so cosa dirti",
-  "Non te lo posso dire"
-];
-let chatMessages = [];
+// Diario gite Karis: http://karis.cloud.neth.eu/blogger-gb-news/
 
 function addMessage(e) {
   // non ricaricare la pagina quando viene premuto INVIO nel campo di input
   e.preventDefault();
 
-  // recuperiamo il messaggio dell'utente
-  let userMessage = document.getElementById("user-message").value;
+  // recupera il messaggio dell'utente
+  let userMessage = document.getElementById("user-message").value.trim();
 
   // non fare niente se il messaggio dell'utente è vuoto
   if (userMessage.length == 0) {
     return;
   }
 
-  let messageObj = { type: "user-message", message: userMessage };
+  // crea l'elemento HTML per il messaggio dell'utente
+  const userMessageElement = document.createElement("div");
+  const userMessageClasses = userMessageElement.classList;
+  userMessageClasses.add("message-bubble");
+  userMessageClasses.add("user-message");
+  userMessageElement.textContent = userMessage;
 
-  // aggiungiamo il messaggio dell'utente all'array dei messaggi
-  chatMessages.push(messageObj);
+  // crea l'elemento HTML per il messaggio di caricamento
+  const loadingMessageElement = document.createElement("div");
+  const loadingMessageClasses = loadingMessageElement.classList;
+  loadingMessageClasses.add("message-bubble");
 
-  // scegli una risposta casuale
-  let randomIndex = Math.floor(Math.random() * randomAnswers.length);
-  let botMessage = { type: "bot-message", message: randomAnswers[randomIndex] };
-  // aggiungiamo il messaggio del bot all'array dei messaggi
-  chatMessages.push(botMessage);
+  // crea l'elemento HTML per il loader
+  const loaderElement = document.createElement("span");
+  const loaderClasses = loaderElement.classList;
+  loaderClasses.add("loader");
 
-  // popoliamo la chat con i messaggi
-  let chatElement = document.getElementById("chat-messages");
-  chatElement.innerHTML = "";
+  // aggiungi il loader al messaggio di caricamento
+  loadingMessageElement.appendChild(loaderElement);
 
-  for (let i = 0; i < chatMessages.length; i++) {
-    chatElement.innerHTML +=
-      '<div class="message-bubble ' + chatMessages[i].type + '">' + chatMessages[i].message;
-    ("</div>");
-  }
+  // recupera l'elemento HTML della chat
+  const chatMessagesElement = document.getElementById("chat-messages");
+
+  // aggiungi il messaggio dell'utente alla chat
+  chatMessagesElement.appendChild(userMessageElement);
+
+  // aggiungi il messaggio di caricamento alla chat
+  chatMessagesElement.appendChild(loadingMessageElement);
+
+  // scrolla la chat in basso
+  chatMessagesElement.scrollTop = chatMessagesElement.scrollHeight;
+
+  // codifica il messaggio dell'utente per l'invio al server (sostituisce spazi e caratteri speciali)
+  const userMessageEncoded = encodeURI(userMessage);
+
+  // invia il messaggio dell'utente al server e attendi la risposta
+  fetch("http://karis.sf.nethserver.net:8888/generate/" + userMessageEncoded)
+    .then((response) => response.json())
+    .then((data) => {
+      // crea l'elemento HTML per il messaggio del bot
+      const botMessageElement = document.createElement("div");
+      const botMessageClasses = botMessageElement.classList;
+      botMessageClasses.add("message-bubble");
+      botMessageClasses.add("bot-message");
+      botMessageElement.textContent = data;
+
+      // rimuovi il messaggio di caricamento
+      loadingMessageElement.remove();
+
+      // aggiungi il messaggio del bot alla chat
+      chatMessagesElement.appendChild(botMessageElement);
+
+      // scrolla la chat in basso
+      chatMessagesElement.scrollTop = chatMessagesElement.scrollHeight;
+    })
+    .catch((error) => {
+      console.error("Errore durante la fetch:", error);
+
+      //// notifica su UI
+    });
 
   // pulisci il campo di input
   document.getElementById("user-message").value = "";

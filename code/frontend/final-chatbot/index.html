@@ -22,47 +22,32 @@
         id="chat-messages"
         class="messages flex flex-col items-start gap-4 overflow-y-auto flex-1"
       >
-        <!-- <div //// 
-          v-for="(message, index) in chatMessages"
-          :key="index"
-          :class="[
-            'rounded-xl bg-gray-800 p-5 max-w-md',
-            { 'self-end bg-primary-900': message.role == 'user' }
-          ]"
-          v-html="message.content"
-        />
-        <div v-if="isLoading" class="rounded-xl bg-gray-800 p-5 max-w-md">
-          <div v-if="chatOutput.length">{{ chatOutput }}</div>
-          <ColoredSkeleton
-            v-else
-            :lines="2"
-            colorClasses="bg-primary-300 dark:bg-primary-700"
-            size="sm"
-            class="w-80"
-          />
-        </div> -->
+        <div class="message-bubble" style="list-style-position: inside">
+          <p>Ciao, questo è l'elenco delle gite di cui sono a conoscenza:</p>
+          <ul>
+            <li>Firenze 05/2024</li>
+            <li>Parma 2023</li>
+            <li>Mantova 2024</li>
+            <li>Campania 2023</li>
+            <li>Grecia 2022</li>
+            <li>Firenze 02/2024</li>
+            <li>Vienna e Monaco 2023</li>
+            <li>Museo del Balì 2023</li>
+            <li>Antibes 2024</li>
+          </ul>
+        </div>
       </div>
       <!-- user input -->
-      <form onsubmit="return addMessage(event)" class="input-and-button flex gap-4 py-4">
-        <!-- <NeTextInput //// 
-          v-model.trim="chatInput"
-          placeholder="Message"
-          :disabled="isLoading"
-          ref="chatInputRef"
-          class="grow"
-        />
-        <NeButton
-          type="submit"
-          kind="primary"
-          @click="send"
-          :disabled="isLoading"
-          >Send</NeButton
-        > -->
+      <form
+        onsubmit="return addMessage(event)"
+        class="input-and-button flex gap-4 py-4"
+      >
         <input
           id="user-message"
           type="text"
-          placeholder="Scrivi un messaggio..."
+          placeholder="Chiedi a Karis Chatbot"
           class="message-input"
+          autofocus
         />
         <button type="submit" class="send-button">Invia</button>
       </form>
