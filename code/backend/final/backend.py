@@ -9,12 +9,22 @@ from langchain_core.vectorstores import VectorStoreRetriever
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 from langchain_core.runnables import RunnablePassthrough
+from fastapi.middleware.cors import CORSMiddleware
 
 # Apply nest_asyncio to allow event loop reuse
 nest_asyncio.apply()
 
 # Create the FastAPI app
 app = FastAPI()
+
+origins = ["*"]
+app.add_middleware(
+	CORSMiddleware,
+	allow_origins=origins,
+	allow_credentials=True,
+	allow_methods=["*"],
+	allow_headers=["*"],
+)
 
 @app.get("/documents/{query}", response_model=List[dict])
 def get_documents(query: str):
