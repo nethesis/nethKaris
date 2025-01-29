@@ -73,7 +73,13 @@ def get_generate(query: str):
 	# Usiamo il modello di GPT
 	llm = ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
 	prompt_template = ChatPromptTemplate.from_messages([
-		("system", "Utilizza il contenuto del testo fornito per rispondere alla domanda dell'utente citando la fonte. Rispondi che non conosci la risposta se non è contenuta nel testo."),
+		("system", """
+Utilizza il contenuto del testo fornito per rispondere alla domanda dell'utente rispettando le seguenti regole:
+   - **Cita la fonte**: includi il link alla pagina web da cui proviene il testo nel formato "fonte: http://..."
+   - **Rispondi alla domanda**: scrivi una risposta alla domanda dell'utente in modo chiaro e conciso.
+   - **Non inventare informazioni**: Usa solo le informazioni presenti nel testo fornito.
+   - **Usa la lingua dell'utente**: Rispondi nella lingua in cui è stata fatta la domanda
+"""),
 		("user","Domanda: {question}\n\nTesto:\n{text}")
 	])
 	chain = ({"text": RunnablePassthrough(), "question": RunnablePassthrough()} | prompt_template | llm)
