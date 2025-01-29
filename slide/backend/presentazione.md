@@ -1,3 +1,5 @@
+https://docs.google.com/presentation/d/1S-DClbMQSn-ab71bwiGEZYJQTDI2CvsUbM4MOO-V03Y/edit#slide=id.g32a4700ea73_0_12
+
 # Scuola AI Backend
 
 ## Raccolta Pagine Web
