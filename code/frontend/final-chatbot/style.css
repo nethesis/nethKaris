@@ -49,6 +49,11 @@ body {
   align-self: flex-end;
 }
 
+.loading-message {
+  display: flex;
+  align-items: center;
+}
+
 .error-message {
   background-color: #7f1d1d;
 }
@@ -85,20 +90,28 @@ body {
   background-color: #60a5fa;
 }
 
+ul {
+  list-style-position: inside;
+}
+
+a[href] {
+  color: #60a5fa;
+}
+
 .loader {
   width: 24px;
   height: 24px;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   border-radius: 50%;
   display: inline-block;
   position: relative;
   box-sizing: border-box;
   animation: rotation 0.7s linear infinite;
-  margin-right: 10rem;
+  margin-right: 1rem;
 }
 
 .loader::after {
-  content: '';  
+  content: "";
   box-sizing: border-box;
   position: absolute;
   left: 50%;
@@ -118,4 +131,4 @@ body {
   100% {
     transform: rotate(360deg);
   }
-} 
+}

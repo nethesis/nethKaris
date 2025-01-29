@@ -15,10 +15,24 @@
       </div>
       <!-- messaggi -->
       <div id="chat-messages" class="messages">
-        <!-- elenco gite conosciute -->
-        <!-- ... -->
+        <div class="message-bubble bot-message">
+          <p style="margin-bottom: 0.5rem">
+            Ciao! Questo è l'elenco delle gite di cui sono a conoscenza:
+          </p>
+          <ul>
+            <li>Firenze 05/2024</li>
+            <li>Parma 2023</li>
+            <li>Mantova 2024</li>
+            <li>Campania 2023</li>
+            <li>Grecia 2022</li>
+            <li>Firenze 02/2024</li>
+            <li>Vienna e Monaco 2023</li>
+            <li>Museo del Balì 2023</li>
+            <li>Antibes 2024</li>
+          </ul>
+        </div>
       </div>
-      <!-- messaggio utente -->
+      <!-- user input -->
       <form onsubmit="return addMessage(event)" class="input-and-button">
         <input
           id="user-message"
@@ -30,6 +44,7 @@
         <button type="submit" class="send-button">Invia</button>
       </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

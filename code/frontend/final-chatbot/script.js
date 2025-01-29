@@ -1,5 +1,15 @@
 // Diario gite Karis: http://karis.cloud.neth.eu/blogger-gb-news/
 
+// apri i link ai documenti in una nuova scheda
+const renderer = new marked.Renderer();
+renderer.link = function(href, title, text) {
+  const link = marked.Renderer.prototype.link.apply(this, arguments);
+    return link.replace("<a","<a target='_blank'");
+};
+marked.setOptions({
+    renderer: renderer
+});
+
 function addMessage(e) {
   // non ricaricare la pagina quando viene premuto INVIO nel campo di input
   e.preventDefault();
@@ -22,15 +32,20 @@ function addMessage(e) {
   // crea l'elemento HTML per il messaggio di caricamento
   const loadingMessageElement = document.createElement("div");
   const loadingMessageClasses = loadingMessageElement.classList;
-  loadingMessageClasses.add("message-bubble");
+  loadingMessageClasses.add("message-bubble", "loading-message");
 
   // crea l'elemento HTML per il loader
   const loaderElement = document.createElement("span");
   const loaderClasses = loaderElement.classList;
   loaderClasses.add("loader");
 
-  // aggiungi il loader al messaggio di caricamento
+  // crea l'elemento HTML per il testo del loader
+  const loaderTextElement = document.createElement("span");
+  loaderTextElement.textContent = "Sto pensando...";
+
+  // aggiungi il loader e il testo al messaggio di caricamento
   loadingMessageElement.appendChild(loaderElement);
+  loadingMessageElement.appendChild(loaderTextElement);
 
   // recupera l'elemento HTML della chat
   const chatMessagesElement = document.getElementById("chat-messages");
@@ -51,23 +66,22 @@ function addMessage(e) {
   fetch("http://karis.sf.nethserver.net:8888/generate/" + userMessageEncoded)
     .then((response) => response.json())
     .then((data) => {
-      console.log("Risposta:", data);
-
       // crea l'elemento HTML per il messaggio del bot
       const botMessageElement = document.createElement("div");
       const botMessageClasses = botMessageElement.classList;
       botMessageClasses.add("message-bubble");
       botMessageClasses.add("bot-message");
-      botMessageElement.textContent = data;
+      htmlContent = marked.parse(data);
+      botMessageElement.innerHTML = htmlContent;
 
       // rimuovi il messaggio di caricamento
       loadingMessageElement.remove();
 
       // aggiungi il messaggio del bot alla chat
-      // ...
+      chatMessagesElement.appendChild(botMessageElement);
 
       // scrolla la chat in basso
-      // ...
+      chatMessagesElement.scrollTop = chatMessagesElement.scrollHeight;
     })
     .catch((error) => {
       console.error("Errore:", error);
@@ -83,7 +97,7 @@ function addMessage(e) {
       loadingMessageElement.remove();
 
       // aggiungi il messaggio del bot alla chat
-      // ...
+      chatMessagesElement.appendChild(errorMessageElement);
 
       // scrolla la chat in basso
       chatMessagesElement.scrollTop = chatMessagesElement.scrollHeight;
