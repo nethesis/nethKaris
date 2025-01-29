@@ -1,13 +1,15 @@
 // Diario gite Karis: http://karis.cloud.neth.eu/blogger-gb-news/
 
+const apiUrl = "http://karis.sf.nethserver.net:8888/generate";
+
 // apri i link ai documenti in una nuova scheda
 const renderer = new marked.Renderer();
-renderer.link = function(href, title, text) {
+renderer.link = function (href, title, text) {
   const link = marked.Renderer.prototype.link.apply(this, arguments);
-    return link.replace("<a","<a target='_blank'");
+  return link.replace("<a", "<a target='_blank'");
 };
 marked.setOptions({
-    renderer: renderer
+  renderer: renderer
 });
 
 function addMessage(e) {
@@ -63,7 +65,7 @@ function addMessage(e) {
   const userMessageEncoded = encodeURI(userMessage);
 
   // invia il messaggio dell'utente al server e attendi la risposta
-  fetch("http://karis.sf.nethserver.net:8888/generate/" + userMessageEncoded)
+  fetch(apiUrl + "/" + userMessageEncoded)
     .then((response) => response.json())
     .then((data) => {
       // crea l'elemento HTML per il messaggio del bot
