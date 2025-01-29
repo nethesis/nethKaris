@@ -51,6 +51,8 @@ function addMessage(e) {
   fetch("http://karis.sf.nethserver.net:8888/generate/" + userMessageEncoded)
     .then((response) => response.json())
     .then((data) => {
+      console.log("Risposta:", data);
+
       // crea l'elemento HTML per il messaggio del bot
       const botMessageElement = document.createElement("div");
       const botMessageClasses = botMessageElement.classList;
@@ -62,10 +64,10 @@ function addMessage(e) {
       loadingMessageElement.remove();
 
       // aggiungi il messaggio del bot alla chat
-      chatMessagesElement.appendChild(botMessageElement);
+      // ...
 
       // scrolla la chat in basso
-      chatMessagesElement.scrollTop = chatMessagesElement.scrollHeight;
+      // ...
     })
     .catch((error) => {
       console.error("Errore:", error);
@@ -81,7 +83,7 @@ function addMessage(e) {
       loadingMessageElement.remove();
 
       // aggiungi il messaggio del bot alla chat
-      chatMessagesElement.appendChild(errorMessageElement);
+      // ...
 
       // scrolla la chat in basso
       chatMessagesElement.scrollTop = chatMessagesElement.scrollHeight;
