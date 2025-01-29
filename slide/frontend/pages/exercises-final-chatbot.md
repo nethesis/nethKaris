@@ -5,11 +5,6 @@ layout: cover
 # Chatbot finale 🤖
 
 ---
-src: ../pages/exercise-0-setup.md
-hide: false
----
-
----
 
 # Esercizio 1: Elenco gite conosciute 🧳
 
@@ -22,7 +17,7 @@ hide: false
 
 ---
 
-# Esercizio 1: Elenco gite conosciute 🧳 (2)
+# Esercizio 1: Elenco gite conosciute (2) 🧳
 
 - Sotto al paragrafo, aggiungi il seguente elenco puntato:
 
@@ -62,15 +57,16 @@ hide: false
   - Premi F12 sulla tastiera per aprire la console sviluppatori
   - Clicca il tab **Network**, poi **No throttling**, poi **Offline** (continua nella prossima pagina)
 
-<img src="/offline.png" class="h-60" />
+<img src="/offline.png" class="mt-4 h-56" />
 
 ---
 
-# Esercizio 3: Gestione degli errori ❌ (2)
+# Esercizio 3: Gestione degli errori (2) ❌
 
-- Dopo aver il messaggio di errore alla chat, chiedendo qualcosa al chatbot dovrebbe rispondere così:
+- Dopo aver il messaggio di errore alla chat, chiedendo qualcosa al chatbot dovrebbe rispondere come in figura
+- Ricordati di rimuovere lo stato **Offline** e reimpostare **No throttling** nella console sviluppatori!
 
-<img src="/chatbot-error.png" class="h-96" />
+<img src="/chatbot-error.png" class="mt-4 h-80" />
 
 ---
 
@@ -78,6 +74,13 @@ hide: false
 
 - Su Visual Studio Code apri il file `final-chatbot/style.css`
 - Cambia i colori della chat modificando le regole CSS
-- Complimenti, hai sistemato e personalizzato il chatbot!
 
-<div class="mt-16 text-9xl text-center">🎉</div>
+---
+layout: cover
+---
+
+# Complimenti!
+
+Hai concluso gli esercizi e personalizzato il chatbot!
+
+<div class="mt-16 text-8xl text-center">🎉</div>

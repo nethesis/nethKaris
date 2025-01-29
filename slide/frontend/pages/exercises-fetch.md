@@ -8,65 +8,52 @@ layout: cover
 
 # Esercizio 1: Caccia al Pokémon 
 
-Recuperiamo informazioni su Pikachu usando `fetch`!
-
-*   Apri `fetch-1-pokemon/pokemon.html` nel browser.
-*   Apri `fetch-1-pokemon/script.js` in Visual Studio Code.
-*   Useremo l'API PokéAPI: [https://pokeapi.co/](https://pokeapi.co/).
-*   Endpoint: `/api/v2/pokemon/pikachu`.
+*   Useremo `fetch` e l'API PokéAPI: [https://pokeapi.co/](https://pokeapi.co/) per recuperare le informazioni su Pikachu
+*   Apri `fetch-1-pokemon/pokemon.html` nel browser
+*   Apri `fetch-1-pokemon/script.js` in Visual Studio Code
+*   (continua nella prossima pagina)
 
 ---
 
 # Esercizio 1: Caccia al Pokémon (2) ✏️
 
-Scrivi il codice in `script.js` per:
-
-1.  Fare una richiesta `fetch` all'API di Pikachu.
-2.  Usare `.then` per gestire la risposta e convertirla in JSON.
-3.  Usare un altro `.then` per mostrare i dati di Pikachu nella console (`console.log(data)`).
-
-Apri la console del browser (tasto destro -> "Ispeziona" -> "Console"). Dovresti vedere i dati JSON.
-
----
-
-# Esercizio 2: Trova un Pokémon a caso 
-
-Mostriamo un Pokémon casuale!
-
-*   Endpoint per la lista di tutti i Pokémon: `https://pokeapi.co/api/v2/pokemon?limit=100`.
+- Apri la console del browser (tasto F12, poi clicca il tab **Console**). Dovresti vedere "Risposta: Object"
+- Clicca **Object** per vedere come è fatta la risposta dell'API
+- Esamina il codice in `script.js`:
+  - Esegue una richiesta `fetch` all'API di Pikachu.
+  - Usa `.then` per convertire la risposta in formato JSON.
+  - Usa un altro `.then` per mostrare i dati di Pikachu sulla console (`console.log(data)`).
+  - Ora tocca a te: sotto l'immagine del pokemon, mostra sulla pagina web un paragrafo con indicato il peso del pokemon (Es: "Peso: 60"). Questo dato si trova nell'attributo `data.weight` della risposta dell'API
 
 ---
 
-# Esercizio 2: Trova un Pokémon a caso (2) ✏️
+# Esercizio 2: Trova un Pokémon a caso ✏️
 
-Modifica il codice in `script.js` per:
-
-1.  Fare una `fetch` per ottenere la lista di Pokémon.
-2.  Scegliere un Pokémon casuale dalla lista (usa `Math.random()` e `data.results.length`).
-3.  Fare *un'altra* `fetch` usando l'URL del Pokémon casuale (`pokemonCasuale.url`).
-4.  Mostrare nome e immagine del Pokémon casuale nella pagina (come nell'esercizio 1).
+- Apri `fetch-2-pokemon-casuale/pokemon-casuale.html` nel browser
+- Apri `fetch-2-pokemon-casuale/script.js` in Visual Studio Code
+- Esamina il codice in `script.js`:
+  - Esegue una richiesta `fetch` per recuperare i dati di 100 pokemon (`limit=100`)
+  - Sceglie un Pokémon casuale dalla lista usando `Math.random()`
+  - Esegue un'altra `fetch` usando l'URL del Pokémon casuale (`pokemonCasuale.url`)
+  - Mostra nome e immagine del Pokémon casuale nella pagina (come nell'esercizio 1)
 
 ---
 
-# Esercizio 3: Gestione degli Errori ⚠️
+# Esercizio 3: Gestione degli Errori ✏️
 
-Aggiungiamo la gestione degli errori!
+* In questo esercizio devi solo esaminare il codice in `script.js`:
+1.  Controlla se la risposta è `ok` (`response.ok`) *dentro il primo `.then`*.
+2.  Se non è `ok`, lancia un errore con il codice di stato: `throw new Error("Errore HTTP! Stato: ${response.status}");`
+3.  Usa `.catch()` per "catturare" e gestire gli errori
 
 ---
 
 # Esercizio 3: Gestione degli Errori (2) ✏️
 
-Modifica il codice in `script.js` per:
+- Per simulare un errore di connessione assente:
+  - Premi F12 sulla tastiera per aprire la console sviluppatori
+  - Clicca il tab **Network**, poi **No throttling**, poi **Offline**
+  - Premi F5 per ricaricare la pagina e ripetere la `fetch`, che ora fallirà
+  - Ricordati di rimuovere lo stato **Offline** e reimpostare **No throttling** nella console sviluppatori!
 
-1.  Controllare se la risposta è `ok` (`response.ok`) *dentro il primo `.then`*.
-2.  Se non è `ok`, lanciare un errore con il codice di stato: `throw new Error(\`Errore HTTP! Stato: ${response.status}\`);`.
-3.  Usare `.catch()` per "catturare" gli errori.
-
----
-
-# Riassunto degli esercizi ✅
-
-*   Richieste `fetch` a un'API pubblica.
-*   Gestione risposte JSON.
-*   Mostrare dati nella pagina.
-*   Gestione degli errori (fondamentale!).
+<img src="/offline.png" class="mt-4 h-60" />

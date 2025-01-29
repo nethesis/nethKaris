@@ -1,5 +1,5 @@
-// 1. Fai una fetch per ottenere la lista di tutti i Pokémon (limit=10000)
-fetch("https://pokeapi.co/api/v2/pokemon?limit=10000")
+// 1. Fai una fetch per ottenere la lista di tutti i Pokémon (limit=100)
+fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
   .then((response) => {
     // 2. Controlla se la risposta è ok (response.ok)
     if (!response.ok) {

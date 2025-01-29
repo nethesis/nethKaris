@@ -1,16 +1,16 @@
-// 1. Fai una fetch per ottenere la lista di tutti i Pokémon (limit=10000)
-fetch("https://pokeapi.co/api/v2/pokemon?limit=10000")
+// usa fetch per ottenere una lista di 100 Pokémon
+fetch("https://pokeapi.co/api/v2/pokemon?limit=100")
   .then((response) => response.json())
   .then((data) => {
-    // 2. Scegli un Pokémon casuale dalla lista (usa Math.random e data.results.length)
+    // scegli un Pokémon casuale dalla lista usando Math.random
     const pokemonCasuale =
       data.results[Math.floor(Math.random() * data.results.length)];
 
-    // 3. Fai un'altra fetch per ottenere i dettagli del Pokémon casuale (usa pokemonCasuale.url)
+    // esegui un'altra fetch per ottenere i dettagli del Pokémon casuale
     fetch(pokemonCasuale.url)
       .then((response) => response.json())
       .then((dettagliPokemon) => {
-        // 4. Mostra il nome e l'immagine del Pokémon nel div con id "pokemon-container"
+        // mostra il nome e l'immagine del Pokémon nel div con id "pokemon-container"
         const pokemonContainer = document.getElementById("pokemon-container");
         const nomePokemon = document.createElement("h2");
         nomePokemon.textContent = dettagliPokemon.name;
