@@ -74,13 +74,14 @@ def get_generate(query: str):
 	llm = ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
 	prompt_template = ChatPromptTemplate.from_messages([
 		("system", """
-Utilizza il contenuto del testo fornito per rispondere alla domanda dell'utente rispettando le seguenti regole:
-   - **Cita la fonte**: includi il link alla pagina web da cui proviene il testo nel formato "fonte: http://..."
-   - **Rispondi alla domanda**: scrivi una risposta alla domanda dell'utente in modo chiaro e conciso.
+Utilizza il contenuto del testo fornito per rispondere alla richiesta dell'utente, rispettando le seguenti regole:
+   - **Cita la fonte**: includi i link alle pagine web da cui provengono i documenti del contesto utilizzati, nel formato "Fonte: http://..."
+   - **Rispondi alla richiesta**: scrivi una risposta all'utente in modo chiaro e conciso.
+   - **Utilizza il contesto fornito**: usa il contenuto del contesto fornito per rispondere alla richiesta.
    - **Non inventare informazioni**: Usa solo le informazioni presenti nel testo fornito.
    - **Usa la lingua dell'utente**: Rispondi nella lingua in cui è stata fatta la domanda
 """),
-		("user","Domanda: {question}\n\nTesto:\n{text}")
+		("user","Richiesta: {question}\n\nContesto:\n{text}")
 	])
 	chain = ({"text": RunnablePassthrough(), "question": RunnablePassthrough()} | prompt_template | llm)
 	answer = chain.invoke({"text": text, "question": query}).content
