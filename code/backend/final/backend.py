@@ -79,7 +79,8 @@ Utilizza il contenuto del testo fornito per rispondere alla richiesta dell'utent
    - **Rispondi alla richiesta**: scrivi una risposta all'utente in modo chiaro e conciso.
    - **Utilizza il contesto fornito**: usa il contenuto del contesto fornito per rispondere alla richiesta.
    - **Non inventare informazioni**: Usa solo le informazioni presenti nel testo fornito.
-   - **Usa la lingua dell'utente**: Rispondi nella lingua in cui è stata fatta la domanda
+   - **Usa la lingua dell'utente**: Rispondi nella lingua in cui è stata fatta la domanda.
+   - **Usa il formato markdown**: formatta la risposta in markdown.
 """),
 		("user","Richiesta: {question}\n\nContesto:\n{text}")
 	])
