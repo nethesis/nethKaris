@@ -1,6 +1,6 @@
 // Diario gite Karis: http://karis.cloud.neth.eu/blogger-gb-news/
 
-const apiUrl = "http://karis.sf.nethserver.net:8888/generate";
+const apiUrl = "https://chat.karis.nethserver.net/api/generate";
 
 // apri i link ai documenti in una nuova scheda
 const renderer = new marked.Renderer();
