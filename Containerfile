@@ -5,7 +5,9 @@ WORKDIR /app
 
 COPY code/backend/final/backend.py /app/
 COPY code/backend/final/load.py /app/
-
+COPY code/backend/final/requirements.txt ./
+COPY code/backend/final/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 RUN pip install -r requirements.txt
 
-CMD ["python", "load.py", "&&", "python", "backend.py"]
+ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]

@@ -71,7 +71,7 @@ def get_generate(query: str):
 		text += "source: " + document.metadata["source"] + "\n\n"
     
 	# Usiamo il modello di GPT
-	llm = ChatOpenAI(temperature=0, model_name="gpt-4o-mini")
+	llm = ChatOpenAI(temperature=0, model_name="gpt-4o")
 	prompt_template = ChatPromptTemplate.from_messages([
 		("system", """
 Utilizza il contenuto del testo fornito per rispondere alla richiesta dell'utente, rispettando le seguenti regole:
@@ -89,6 +89,6 @@ Utilizza il contenuto del testo fornito per rispondere alla richiesta dell'utent
 	return answer
 
 # Run the FastAPI app
-uvicorn.run(app, host="0.0.0.0", port=8888)
+uvicorn.run(app, host="0.0.0.0", port=8808)
 
 # verifica il funzionamento andando alla pagina http://karis.sf.nethserver.net:8000/documents/testquery
